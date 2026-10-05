@@ -20,8 +20,10 @@ Site vitrine personnalisé pour **Sawab Dine**, chasseur de têtes / recruteur a
 10. Contact
 
 ## Notes
-- Les éléments marqués **[À valider]** sont des placeholders à confirmer avec Sawab Dine
-  (chiffres, témoignages, honoraires, garantie, mandats, photo professionnelle).
+- ⚠️ **Contenu de démonstration** : les chiffres (150+ placements, 94 %, 3 sem., 87 %),
+  les honoraires (22 %, garantie 90 jours), les témoignages, les mandats affichés et
+  l'adresse courriel sont **inventés de façon réaliste** et doivent être validés ou
+  remplacés par les vraies données avant toute publication.
 - Conformité à valider juridiquement : Loi 25 (protection des renseignements personnels),
   Loi 96 (version anglaise), WCAG 2.2.
 - Formulaire de contact : démo front-end, à connecter à un backend.
