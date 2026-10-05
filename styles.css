@@ -3,7 +3,7 @@
     --navy: #0e1c31;
     --navy-light: #1a2f4d;
     --navy-soft: #243b5e;
-    --gold: #b8912a;
+    --gold: #8f6f1d;
     --gold-light: #d9b95c;
     --cream: #faf8f2;
     --white: #ffffff;
@@ -186,7 +186,7 @@ p:last-child { margin-bottom: 0; }
 }
 .checklist li::before {
     content: ""; position: absolute; left: 0; top: 13px; width: 20px; height: 20px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8912a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") no-repeat center / contain;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f6f1d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
 /* Étapes méthodologie */
