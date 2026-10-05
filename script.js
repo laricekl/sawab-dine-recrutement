@@ -56,13 +56,33 @@
         });
     }
 
-    // Newsletter (démo — à connecter à un backend)
+    // Newsletter — inscription réelle via FormSubmit
     var newsletter = document.getElementById('newsletterForm');
+    var nlStatus = document.getElementById('newsletterStatus');
     if (newsletter) {
         newsletter.addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Merci ! Votre inscription à la infolettre est confirmée (démo).');
-            newsletter.reset();
+            var btn = newsletter.querySelector('button[type="submit"]');
+            var originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = '…';
+            nlStatus.textContent = '';
+            fetch(newsletter.action, {
+                method: 'POST',
+                body: new FormData(newsletter),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (res) {
+                if (!res.ok) throw new Error('send failed');
+                nlStatus.textContent = 'Inscription confirmée. Bienvenue !';
+                nlStatus.className = 'newsletter-status form-success';
+                newsletter.reset();
+            }).catch(function () {
+                nlStatus.textContent = "Échec de l'inscription. Réessayez plus tard.";
+                nlStatus.className = 'newsletter-status form-error';
+            }).finally(function () {
+                btn.disabled = false;
+                btn.textContent = originalText;
+            });
         });
     }
 

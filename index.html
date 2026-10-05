@@ -253,9 +253,13 @@
                     <h3>Recevez nos insights</h3>
                     <p>Analyses du marché, conseils recrutement et repères salariaux — une fois par mois, sans spam.</p>
                 </div>
-                <form class="newsletter-form" id="newsletterForm">
+                <form class="newsletter-form" id="newsletterForm" action="https://formsubmit.co/laricelk@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nouvelle inscription infolettre — Site Sawab Dine">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <input type="email" name="email" placeholder="Votre courriel professionnel" required aria-label="Votre courriel professionnel">
                     <button type="submit" class="btn btn-primary">S'abonner</button>
+                    <p class="newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></p>
                 </form>
             </div>
             <div class="cta-box mt">

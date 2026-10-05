@@ -300,6 +300,7 @@ p:last-child { margin-bottom: 0; }
     outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,145,42,0.16);
 }
 .newsletter-form .btn { white-space: nowrap; }
+.newsletter-status { font-size: 0.88rem; font-weight: 600; margin: 0; flex-basis: 100%; }
 @media (max-width: 640px) {
     .newsletter-box { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
