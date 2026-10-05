@@ -129,7 +129,12 @@ p:last-child { margin-bottom: 0; }
     text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.78rem;
     color: var(--gold-light); font-weight: 700; margin-bottom: 22px;
 }
-.hero-sub { color: #d3dcea; font-size: clamp(1.02rem, 1.6vw, 1.16rem); max-width: 660px; margin: 22px auto 44px; line-height: 1.75; }
+.hero-sub { color: #d3dcea; font-size: clamp(1.02rem, 1.6vw, 1.16rem); max-width: 660px; margin: 22px auto 18px; line-height: 1.75; }
+.hero-zones {
+    color: var(--gold-light); font-size: 0.88rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin: 0 auto 44px;
+}
 
 .hero-dual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 700px; margin: 0 auto clamp(48px, 6vw, 72px); }
 .dual-card {
@@ -272,6 +277,34 @@ p:last-child { margin-bottom: 0; }
 .article-link span { color: var(--gold); transition: transform 0.2s ease; }
 .article-link:hover span { transform: translateX(4px); }
 .article-link:hover { color: var(--gold); }
+.article-meta {
+    font-size: 0.8rem; color: var(--muted); margin: 12px 0 0;
+    letter-spacing: 0.02em;
+}
+
+/* Boîte newsletter */
+.newsletter-box {
+    background: var(--white); border: 1px solid var(--hairline); border-radius: var(--radius);
+    padding: clamp(28px, 3.6vw, 40px); box-shadow: var(--shadow-soft);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center;
+}
+.newsletter-box h3 { font-family: var(--font-body); font-weight: 700; margin-bottom: 8px; }
+.newsletter-box p { color: var(--muted); font-size: 0.96rem; margin: 0; }
+.newsletter-form { display: flex; gap: 10px; }
+.newsletter-form input {
+    flex: 1; padding: 13px 16px; border: 1.5px solid #dcd7c8; border-radius: 999px;
+    font-size: 0.95rem; font-family: inherit; min-height: 50px; min-width: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.newsletter-form input:focus {
+    outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,145,42,0.16);
+}
+.newsletter-form .btn { white-space: nowrap; }
+@media (max-width: 640px) {
+    .newsletter-box { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-form .btn { width: 100%; }
+}
 
 /* ---------- Formulaire ---------- */
 .contact-form {

@@ -34,6 +34,16 @@
         });
     }
 
+    // Newsletter (démo — à connecter à un backend)
+    var newsletter = document.getElementById('newsletterForm');
+    if (newsletter) {
+        newsletter.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Merci ! Votre inscription à la infolettre est confirmée (démo).');
+            newsletter.reset();
+        });
+    }
+
     // Reveal on scroll (sobre)
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -45,7 +55,7 @@
         });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.card, .step, .cta-box').forEach(function (el) {
+    document.querySelectorAll('.card, .step, .cta-box, .newsletter-box').forEach(function (el) {
         el.style.opacity = '0';
         el.style.transform = 'translateY(18px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
