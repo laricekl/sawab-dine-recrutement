@@ -239,6 +239,40 @@ p:last-child { margin-bottom: 0; }
 .small { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
 .cta-box .small { color: #93a3bb; }
 
+/* Citation personnelle */
+.about-quote {
+    margin: 28px 0;
+    padding: 6px 0 6px 24px;
+    border-left: 3px solid var(--gold);
+}
+.about-quote p {
+    font-family: var(--font-display);
+    font-size: 1.22rem;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Cartes articles Insights */
+.article-card { display: flex; flex-direction: column; }
+.article-tag {
+    display: inline-block; align-self: flex-start;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); background: rgba(184,145,42,0.1);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 16px;
+}
+.article-card h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; line-height: 1.45; }
+.article-card p { flex: 1; }
+.article-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--navy); font-weight: 700; font-size: 0.94rem; text-decoration: none;
+    margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--hairline);
+}
+.article-link span { color: var(--gold); transition: transform 0.2s ease; }
+.article-link:hover span { transform: translateX(4px); }
+.article-link:hover { color: var(--gold); }
+
 /* ---------- Formulaire ---------- */
 .contact-form {
     display: flex; flex-direction: column; gap: 16px;
