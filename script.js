@@ -24,13 +24,35 @@
         links.style.borderBottom = '1px solid #ece7db';
     });
 
-    // Contact form (démo — à connecter à un backend)
+    // Contact form — envoi réel via FormSubmit
     var form = document.getElementById('contactForm');
+    var formStatus = document.getElementById('formStatus');
     if (form) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Merci ! Votre message a bien été pris en compte (démo — formulaire à connecter).');
-            form.reset();
+            var btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.textContent = 'Envoi en cours…';
+            formStatus.textContent = '';
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (res) {
+                if (res.ok) {
+                    formStatus.textContent = 'Merci ! Votre message a bien été envoyé. Je vous réponds sous 24 h ouvrées.';
+                    formStatus.className = 'form-status form-success';
+                    form.reset();
+                } else {
+                    throw new Error('send failed');
+                }
+            }).catch(function () {
+                formStatus.textContent = "Oups — l'envoi a échoué. Écrivez-moi directement à laricelk@gmail.com.";
+                formStatus.className = 'form-status form-error';
+            }).finally(function () {
+                btn.disabled = false;
+                btn.textContent = 'Envoyer';
+            });
         });
     }
 

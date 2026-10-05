@@ -292,7 +292,10 @@
                     <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/dine-adjibi-m-sc-a28296140" target="_blank" rel="noopener">Voir le profil de Sawab Dine</a></p>
                     <p class="small">Délai de réponse : sous 24 h ouvrées</p>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/laricelk@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nouveau message — Site Sawab Dine">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <label>Vous êtes
                         <select name="profil" required>
                             <option value="">— Choisir —</option>
@@ -304,6 +307,7 @@
                     <label>Courriel<input type="email" name="courriel" required></label>
                     <label>Message<textarea name="message" rows="4" required></textarea></label>
                     <button type="submit" class="btn btn-primary btn-large">Envoyer</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                     <p class="small">En envoyant ce formulaire, vous consentez à l'utilisation de vos données pour traiter votre demande, conformément à la Loi 25.</p>
                 </form>
             </div>

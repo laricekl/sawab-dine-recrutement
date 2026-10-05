@@ -321,8 +321,12 @@ p:last-child { margin-bottom: 0; }
 }
 .contact-form textarea { min-height: 120px; resize: vertical; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-    outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,145,42,0.16);
+    outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(143,111,29,0.16);
 }
+.form-status { font-size: 0.92rem; font-weight: 600; min-height: 1.4em; }
+.form-success { color: #1e7a3c; }
+.form-error { color: #b3261e; }
+.contact-form button:disabled { opacity: 0.65; cursor: wait; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--navy); color: #c3cede; padding: 60px 0 40px; }
